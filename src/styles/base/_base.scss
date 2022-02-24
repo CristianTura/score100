@@ -1,0 +1,46 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mb-5 {
+    margin-bottom: 20px;
+}
+
+.pt-1 {
+    padding-top: 5px;
+}
+
+.pt-5 {
+    padding-top: 20px;
+}
+
+.pb-1 {
+    padding-bottom: 5px;
+}
+
+.pb-5 {
+    padding-bottom: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}
