@@ -1,17 +1,17 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from '../pages/HomePage';
-import QuestionsPage from '../pages/QuestionsPage';
-import ResultsPage from '../pages/ResultsPage';
+import Home from '../pages/Home';
+import Questions from '../pages/Questions';
+import Results from '../pages/Results';
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
 
-        <Route path='/' element={ <HomePage /> } />
-        <Route path='/quiz' element={ <QuestionsPage />} />
-        <Route path='/results' element={ <ResultsPage />} />
+        <Route path='/' element={ <Home /> } />
+        <Route path='/quiz' element={ <Questions />} />
+        <Route path='/results' element={ <Results />} />
 
       </Routes>
     </BrowserRouter>

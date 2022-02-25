@@ -1,40 +1,40 @@
 import { types } from "../types/types";
 
-interface data {
-    category: string,
-    questions: string,
-    type: string,
-    difficulty: string,
-    correct_answer: any[],
-    id?: number,
-    userAnswer?: string | null,
+interface IInitialState {
+  category: string;
+  questions: string;
+  type: string;
+  difficulty: string;
+  correct_answer: string;
+  id?: number;
+  userAnswer?: string | null;
 }
 
-const initialState = [
-    {category: "",
+const initialState: IInitialState[] = [
+  {
+    category: "",
     questions: "",
     type: "",
     difficulty: "",
-    correct_answer: [],
+    correct_answer: "",
     id: 0,
-    userAnswer: null}
-]
+    userAnswer: "",
+  },
+];
 
-export const questionsReducer = (state = initialState,  action: any) => {
-    
-        switch (action.type) {
-    
-            case types.questions:
-                return action.payload
+export const questionsReducer = (state = initialState, action: any) => {
+  switch (action.type) {
+    case types.questions:
+      return action.payload; // return data of API
 
-            case types.setAnswers:
-                return  state.map( item => item.id === action.payload.id 
-                                                ? {...item, userAnswer: action.payload.answer} 
-                                                : item)
-                
-            default:
-                return state;
-    
-        }
-    
+    case types.setAnswers:  // return answers of user
+      return state.map((item) =>
+        item.id === action.payload.id
+          ? { ...item, userAnswer: action.payload.answer }
+          : item
+      );
+
+    default:
+      return state;
+  }
 };

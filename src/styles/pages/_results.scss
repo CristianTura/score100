@@ -1,47 +1,51 @@
-
-
 .results__container {
-    background-color: $primary;
-    min-height: 100vh;
-    padding-bottom: 50px;
+  background-color: $primary;
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
 
 .results__title {
-    padding: 50px 0;
-    @extend %flex-colum-center;
+  padding: 50px 0;
+  color: $text-light;
+  @extend %flex-colum-center;
 }
 
-.results__answer{
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    margin: auto;
+.results__answer {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: auto;
 
-    p {
-        margin: 0;
-        padding: 10px;
-        font-size: 1.3rem;
-        color: white;
-    }
+  p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.3rem;
+    color: white;
+  }
 }
 
 .results__again {
-    text-align: center;
-    color: white;
-    border-bottom: 2px solid white;
-    width: 200px;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-    margin: 50px auto 0;
+  text-align: center;
+  color: white;
+  border-bottom: 2px solid white;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  margin: 50px auto 0;
+
+  &:hover {
+    background-color: $secondary;
+  }
 }
 
 .fa-check {
-    color: green;
-    margin-right: 20px;
+  color: green;
+  margin-right: 20px;
 }
 
 .fa-xmark {
-    color: red;
-    margin-right: 20px;
+  color: red;
+  margin-right: 20px;
 }

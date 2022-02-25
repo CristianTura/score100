@@ -1,54 +1,86 @@
+.question__backImage {
+  background-image: url(https://thumbs.dreamstime.com/b/neonquizzeichenvektor-entwurfsschablone-quiztendenznacht-des-modernen-entwurfs-neonrahmenlichtfahnengestaltungselements-181740843.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  height: 100vh;
+}
 
 .question__container {
-    background-color: $primary;
-    height: 100vh;
-    @extend %flex-colum-center;
+  background: rgba(16, 19, 38, 0.8);
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  @extend %flex-colum-center;
+  color: $text-light;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.quiestion__progress {
+  width: 400px;
+  margin: auto;
 }
 
 .question__card {
-    border: 3px solid rgb(189, 189, 189);
-    height: 60%;
-    width: 500px;
-    padding: 50px;
+  background: rgb(16, 19, 38);
+  background: linear-gradient(
+    135deg,
+    rgba(16, 19, 38, 1) 0%,
+    rgba(47, 51, 73, 1) 50%,
+    rgba(75, 77, 96, 1) 100%
+  );
+  border: 3px solid rgb(189, 189, 189);
+  height: 60%;
+  width: 500px;
+  padding: 50px;
 
-    p {
-        font-size: 1.5rem;
-        max-width: 400px;
-        height: 95%;
-    }
-
+  p {
+    font-size: 1.5rem;
+    max-width: 400px;
+    height: 95%;
+  }
 }
 
 .question__btn-answer {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 
-    button {
-        padding: 8px 20px;
-        border: 1px solid $tertiary;
-        border-radius: 5px;
-        background-color: $secondary;
-        color: white;
-        font-size: 1.1rem;
-        cursor: pointer;
-    }
+  .btn-true {
+    background-color: $secondary;
+  }
 }
 
 .question__btn-NextPrev {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.1rem;
-    width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.1rem;
+  width: 500px;
+  margin-bottom: 30px;
 
-    button {
-        padding: 4px 12px;
-        border: 1px solid $tertiary;
-        font-size: 1.1rem;
-        border-radius: 5px;
-        background-color: $complementary;
-        color: white;
-        
-        cursor: pointer;
-    }
+  button {
+    padding: 4px 15px;
+    border: 1px solid white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: $complementary;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-disabled {
+    opacity: 0.9;
+    border: 1px solid rgb(109, 109, 109);
+    color: rgb(109, 109, 109);
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 640px) {
+  .question__card,
+  .quiestion__progress {
+    width: 90%;
+  }
 }

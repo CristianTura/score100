@@ -7,7 +7,6 @@ export const types = {
 
     setAnswers: '[data] Check Answer',
 
-    restartQuiz: '[restart] Restart Quiz',
 
 }
 
