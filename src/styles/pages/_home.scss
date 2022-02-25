@@ -1,4 +1,23 @@
 
 .home__container {
     background-color: $primary;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home__btn {
+    padding: 8px 20px;
+    border: 1px solid $tertiary;
+    border-radius: 5px;
+    background-color: $secondary;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    .link{
+        color: white;
+        text-decoration: none;
+    }
 }

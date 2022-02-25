@@ -2,6 +2,14 @@
 // Colors
 
 $primary: #00bcd4;
-$dark-blue: #006064;
-$light-blue: #00bcd4;
-$primary-light: #00e5ff;
+$secondary: #006064;
+$tertiary: #c0c3c4;
+$complementary: #19191a;
+
+
+%flex-colum-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

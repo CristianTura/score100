@@ -1,9 +1,20 @@
 import React from 'react'
-import Home from '../pages/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import QuestionsPage from '../pages/QuestionsPage';
+import ResultsPage from '../pages/ResultsPage';
 
 const AppRouter = () => {
   return (
-    <Home />
+    <BrowserRouter>
+      <Routes>
+
+        <Route path='/' element={ <HomePage /> } />
+        <Route path='/quiz' element={ <QuestionsPage />} />
+        <Route path='/results' element={ <ResultsPage />} />
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
